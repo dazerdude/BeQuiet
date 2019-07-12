@@ -7,9 +7,16 @@ I recommend this add-on after experiencing the content at least once from the va
 
 Once you begin to reach the end-game this will likely be the add-on for you.
 
-v1.6.1 Blocks talking heads on island expeditions again due to feedback from users. Thanks!
+Use '/bq' to see the help and current settings, '/bq on|off' to enable or disable the add-on, '/bq ashran|islands' to toggle talking heads for those zones.
 
 # Changelog
+2.0.0
+
+Add config options to whitelist talking heads in islands and Ashran
+
+Implement saved variables to store preferences
+
+Use '/bq' to see the help and current settings, '/bq on|off' to enable or disable the add-on, '/bq ashran|islands' to toggle talking heads for those zones
 
 1.6.2
 Updated TOC for patch 8.2
