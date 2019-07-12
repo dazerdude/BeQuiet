@@ -15,9 +15,6 @@ if NAZJATAR == nil then
 	NAZJATAR = 0
 end
 
---Define nazjatar zone name
-nazjatar = "Nazjatar"
-
 --Define withered army training zones
 withered =	{
 		"Temple of Fal'adora",
@@ -130,10 +127,9 @@ local function MyAddonCommands(arg)
 				print('Talking heads are currently allowed in Nazjatar')
 			end
 		end
-		print(' ')
 		print('Options:')
 		print('<on | off> to enable or disable BeQuiet')
-		print('<ashran | islands> to toggle talking heads during Ashran or Island Expeditions')
+		print('<ashran | islands | nazjatar> to toggle talking heads in Ashran/Islands/Nazjatar')
 	end
 end
 
