@@ -2,5 +2,6 @@
 ## Version: 1.6.2
 ## Title: BeQuiet
 ## Notes: Suppresses talking chat head frame and audio
+## SavedVariables: ASHRAN, ENABLED, ISLANDS
 
 BeQuiet.lua
