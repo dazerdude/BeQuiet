@@ -13,25 +13,25 @@ end
 
 --Define withered army training zones
 withered =	{
-		"Temple of Fal'adora",
-		"Falanaar Tunnels",
-		"Shattered Locus"
-		}
+			"Temple of Fal'adora",
+			"Falanaar Tunnels",
+			"Shattered Locus"
+			}
 
 --Define island expedition zones
 islands =	{
-		"Crestfall",
-		"Snowblossom Village",
-		"Havenswood",
-		"Jorundall",
-		"Molten Cay",
-		"Un'gol Ruins",
-		"The Rotting Mire",
-		"Whispering Reef",
-		"Verdant Wilds",
-		"The Dread Chain",
-		"Skittering Hollow"
-		}
+			"Crestfall",
+			"Snowblossom Village",
+			"Havenswood",
+			"Jorundall",
+			"Molten Cay",
+			"Un'gol Ruins",
+			"The Rotting Mire",
+			"Whispering Reef",
+			"Verdant Wilds",
+			"The Dread Chain",
+			"Skittering Hollow"
+			}
 
 --Create the frame
 local f = CreateFrame("Frame")
@@ -44,7 +44,6 @@ function f:OnEvent(event, addon)
 			--Query current zone and subzone when talking head is triggered
 			zoneName = GetSubZoneText();
 			mainZoneName = GetZoneText();
-			
 			--Only run this logic if the functionality is turned on
 			if ENABLED == 1 then
 				--Block the talking head unless we have a whitelisted condition
@@ -67,7 +66,6 @@ function has_value (tab, val)
 			return true
 		end
 	end
-
 	return false
 end
 
