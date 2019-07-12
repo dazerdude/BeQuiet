@@ -1,5 +1,5 @@
 ## Interface: 80200
-## Version: 2.0.2
+## Version: 2.0.3
 ## Title: BeQuiet
 ## Notes: Suppresses talking chat head frame and audio
 ## SavedVariables: ASHRAN, ENABLED, ISLANDS, NAZJATAR
