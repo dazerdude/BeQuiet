@@ -15,6 +15,8 @@ if NAZJATAR == nil then
 	NAZJATAR = 0
 end
 
+version = "v2.0.3"
+
 --Define withered army training zones
 withered =	{
 		"Temple of Fal'adora",
@@ -108,9 +110,9 @@ local function MyAddonCommands(arg)
 		end
 	else
 		if ENABLED == 0 then
-			print('BeQuiet is currently disabled')
+			print('BeQuiet ' .. version .. ' is currently disabled')
 		elseif ENABLED == 1 then
-			print('BeQuiet is currently enabled')
+			print('BeQuiet ' .. version .. ' is currently enabled')
 			if ASHRAN == 0 then
 				print('Talking heads are currently blocked in Ashran')
 			elseif ASHRAN == 1 then
@@ -127,7 +129,7 @@ local function MyAddonCommands(arg)
 				print('Talking heads are currently allowed in Nazjatar')
 			end
 		end
-		print('Options:')
+		print('-----------')
 		print('<on | off> to enable or disable BeQuiet')
 		print('<ashran | islands | nazjatar> to toggle talking heads in Ashran/Islands/Nazjatar')
 	end
