@@ -1,5 +1,5 @@
 # BeQuiet
-Simple, non-configurable add-on that suppresses the giant frame and the audio for the talking chat heads from NPCs when entering world quests or instances only leaving their text in the regular chat box.
+A simple add-on that suppresses the giant frame and the audio for the talking chat heads from NPCs when entering world quests or instances only leaving their text in the regular chat box.
 
 This add-on was adapted from https://mods.curse.com/addons/wow/hidetalkinghead but was modified to include code comments and to disable the audio as well.
 
