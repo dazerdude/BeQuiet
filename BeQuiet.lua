@@ -47,7 +47,7 @@ function f:OnEvent(event, addon)
 			
 			--Only run this logic if the functionality is turned on
 			if ENABLED == 1 then
-				--Allow the talking head under certain conditions else block it
+				--Block the talking head unless we have a whitelisted condition
 				if not (mainZoneName == 'Ashran' and ASHRAN == 1) and
 					not (has_value(islands, mainZoneName) and ISLANDS == 1) and
 					not (has_value(withered, zoneName)) then
