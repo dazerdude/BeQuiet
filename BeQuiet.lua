@@ -12,22 +12,22 @@ if ISLANDS == nil then
 end
 
 --Define withered army training zones
-withered = {"Temple of Fal'adora", 
-		"Falanaar Tunnels", 
-		"Shattered Locus"}
+withered = {"Temple of Fal'adora",
+					"Falanaar Tunnels",
+					"Shattered Locus"}
 
 --Define island expedition zones
 islands = {"Crestfall",
-		"Snowblossom Village",
-		"Havenswood",
-		"Jorundall",
-		"Molten Cay",
-		"Un'gol Ruins",
-		"The Rotting Mire",
-		"Whispering Reef",
-		"Verdant Wilds",
-		"The Dread Chain",
-		"Skittering Hollow"}
+				"Snowblossom Village",
+				"Havenswood",
+				"Jorundall",
+				"Molten Cay",
+				"Un'gol Ruins",
+				"The Rotting Mire",
+				"Whispering Reef",
+				"Verdant Wilds",
+				"The Dread Chain",
+				"Skittering Hollow"}
 
 --Create the frame
 local f = CreateFrame("Frame")
@@ -44,13 +44,9 @@ function f:OnEvent(event, addon)
 			--Only run this logic if the functionality is turned on
 			if ENABLED == 1 then
 				--Allow the talking head under certain conditions else block it
-				if mainZoneName == 'Ashran' and ASHRAN == 1 then
-					--Allow the talking head
-				elseif has_value(islands, mainZoneName) and ISLANDS == 1 then
-					--Allow the talking head
-				elseif has_value(withered, zoneName) then
-					--Allow the talking head
-				else
+				if not (mainZoneName == 'Ashran' and ASHRAN == 1) and
+					not (has_value(islands, mainZoneName) and ISLANDS == 1) and
+					not (has_value(withered, zoneName)) then
 					--Close the talking head
 					TalkingHeadFrame_CloseImmediately()
 				end
@@ -62,13 +58,13 @@ end
 
 --Function to check if value in array
 function has_value (tab, val)
-    for index, value in ipairs(tab) do
-        if value == val then
-            return true
-        end
-    end
+	for index, value in ipairs(tab) do
+		if value == val then
+			return true
+		end
+	end
 
-    return false
+	return false
 end
 
 --Slash command function
