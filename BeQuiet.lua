@@ -13,10 +13,10 @@ end
 
 --Define withered army training zones
 withered =	{
-			"Temple of Fal'adora",
-			"Falanaar Tunnels",
-			"Shattered Locus"
-			}
+		"Temple of Fal'adora",
+		"Falanaar Tunnels",
+		"Shattered Locus"
+		}
 
 --Define island expedition zones
 islands =	{
