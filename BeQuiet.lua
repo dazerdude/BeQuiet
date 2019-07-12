@@ -12,12 +12,15 @@ if ISLANDS == nil then
 end
 
 --Define withered army training zones
-withered = {"Temple of Fal'adora",
-		"Falanaar Tunnels",
-		"Shattered Locus"}
+withered =	{
+			"Temple of Fal'adora",
+			"Falanaar Tunnels",
+			"Shattered Locus"
+			}
 
 --Define island expedition zones
-islands = {"Crestfall",
+islands =	{
+		"Crestfall",
 		"Snowblossom Village",
 		"Havenswood",
 		"Jorundall",
@@ -27,7 +30,8 @@ islands = {"Crestfall",
 		"Whispering Reef",
 		"Verdant Wilds",
 		"The Dread Chain",
-		"Skittering Hollow"}
+		"Skittering Hollow"
+		}
 
 --Create the frame
 local f = CreateFrame("Frame")
