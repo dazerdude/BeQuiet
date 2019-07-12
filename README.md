@@ -12,8 +12,8 @@ Use '/bq' to see the help and current settings, '/bq on|off' to enable or disabl
 # Changelog
 
 2.0.0
-Add config options to whitelist talking heads in islands and Ashran
-Implement saved variables to store preferences
+Add config options to whitelist talking heads in islands and Ashran.
+Implement saved variables to store preferences.
 Use '/bq' to see the help and current settings, '/bq on|off' to enable or disable the add-on, '/bq ashran|islands' to toggle talking heads for those zones
 
 1.6.2
