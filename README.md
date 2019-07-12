@@ -11,6 +11,9 @@ Use '/bq' to see the help and current settings, '/bq on|off' to enable or disabl
 
 # Changelog
 
+2.0.1
+Code formatting and logic tweaks
+
 2.0.0
 Add config options to whitelist talking heads in islands and Ashran.
 Implement saved variables to store preferences.
