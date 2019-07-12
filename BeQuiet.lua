@@ -13,25 +13,25 @@ end
 
 --Define withered army training zones
 withered =	{
-			"Temple of Fal'adora",
-			"Falanaar Tunnels",
-			"Shattered Locus"
-			}
+		"Temple of Fal'adora",
+		"Falanaar Tunnels",
+		"Shattered Locus"
+		}
 
 --Define island expedition zones
 islands =	{
-			"Crestfall",
-			"Snowblossom Village",
-			"Havenswood",
-			"Jorundall",
-			"Molten Cay",
-			"Un'gol Ruins",
-			"The Rotting Mire",
-			"Whispering Reef",
-			"Verdant Wilds",
-			"The Dread Chain",
-			"Skittering Hollow"
-			}
+		"Crestfall",
+		"Snowblossom Village",
+		"Havenswood",
+		"Jorundall",
+		"Molten Cay",
+		"Un'gol Ruins",
+		"The Rotting Mire",
+		"Whispering Reef",
+		"Verdant Wilds",
+		"The Dread Chain",
+		"Skittering Hollow"
+		}
 
 --Create the frame
 local f = CreateFrame("Frame")
