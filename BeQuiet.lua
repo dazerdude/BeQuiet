@@ -1,4 +1,22 @@
---Initialize variables if they are not saved
+version = "v3.0.0"
+WL_DEFAULT = {
+	"Temple of Fal'adora",
+	"Falanaar Tunnels",
+	"Shattered Locus",
+	"Crestfall",
+	"Snowblossom Village",
+	"Havenswood",
+	"Jorundall",
+	"Molten Cay",
+	"Un'gol Ruins",
+	"The Rotting Mire",
+	"Whispering Reef",
+	"Verdant Wilds",
+	"The Dread Chain",
+	"Skittering Hollow"
+}
+
+--Initialize config variables if they are not saved
 if ENABLED == nil then
 	ENABLED = 1
 end
@@ -9,25 +27,8 @@ end
 
 --Default whitelist includes the withered army training zones from legion and island expeditions from BFA
 if WHITELIST == nil then
-	WHITELIST = {
-		"Temple of Fal'adora",
-		"Falanaar Tunnels",
-		"Shattered Locus",
-		"Crestfall",
-		"Snowblossom Village",
-		"Havenswood",
-		"Jorundall",
-		"Molten Cay",
-		"Un'gol Ruins",
-		"The Rotting Mire",
-		"Whispering Reef",
-		"Verdant Wilds",
-		"The Dread Chain",
-		"Skittering Hollow"
-	}
+	WHITELIST = WL_DEFAULT
 end
-
-version = "v3.0.0"
 
 --Create the frame
 local f = CreateFrame("Frame")
@@ -109,22 +110,7 @@ function MyAddonCommands(args)
 	end
 
 	if args == 'reset' then
-		WHITELIST = {
-			"Temple of Fal'adora",
-			"Falanaar Tunnels",
-			"Shattered Locus",
-			"Crestfall",
-			"Snowblossom Village",
-			"Havenswood",
-			"Jorundall",
-			"Molten Cay",
-			"Un'gol Ruins",
-			"The Rotting Mire",
-			"Whispering Reef",
-			"Verdant Wilds",
-			"The Dread Chain",
-			"Skittering Hollow"
-		}
+		WHITELIST = WL_DEFAULT
 		print('Whitelist has been reset to default.')
 	end
 
