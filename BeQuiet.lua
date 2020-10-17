@@ -44,7 +44,7 @@ function f:OnEvent(event, addon)
 			--Only run this logic if the functionality is turned on
 			if ENABLED == 1 then
 				--Block the talking head unless its in the whitelist
-				if not (has_value(WHITELIST, subZoneName) and has_value(WHITELIST, zoneName)) then
+				if (has_value(WHITELIST, subZoneName) ~= true and has_value(WHITELIST, zoneName) ~= true) then
 					--Close the talking head
 					TalkingHeadFrame_CloseImmediately()
 					if VERBOSE == 1 then
