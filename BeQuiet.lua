@@ -138,7 +138,7 @@ function MyAddonCommands(args)
 
 	if args == '' then
 		print('BeQuiet version ' .. version)
-		print('Options: on | off | verbose | whitelist | reset | show')
+		print('Options: on | off | verbose | whitelist | reset | delete | show')
 		print('-----')
 		if ENABLED == 1 then
 			print('BeQuiet is currently enabled.')
