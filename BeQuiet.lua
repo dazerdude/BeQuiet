@@ -1,4 +1,4 @@
-version = "v3.0.2"
+version = "v3.0.3"
 WL_DEFAULT = {
 	"Temple of Fal'adora",
 	"Falanaar Tunnels",
@@ -111,6 +111,7 @@ function MyAddonCommands(args)
 
 	if args == 'delete' then
 		WHITELIST = {}
+		print('Whitelist has been deleted.')
 	end
 
 	if args == 'reset' then
