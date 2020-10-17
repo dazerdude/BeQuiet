@@ -1,4 +1,4 @@
-version = "v3.0.1"
+version = "v3.0.2"
 WL_DEFAULT = {
 	"Temple of Fal'adora",
 	"Falanaar Tunnels",
@@ -107,6 +107,10 @@ function MyAddonCommands(args)
 			table.insert(WHITELIST, zone)
 			print(zone .. ' added to the whitelist.')
 		end
+	end
+
+	if args == 'delete' then
+		WHITELIST = {}
 	end
 
 	if args == 'reset' then
