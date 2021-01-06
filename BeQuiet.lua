@@ -13,7 +13,8 @@ WL_DEFAULT = {
 	"Whispering Reef",
 	"Verdant Wilds",
 	"The Dread Chain",
-	"Skittering Hollow"
+	"Skittering Hollow",
+	"Torghast, Tower of the Damned"
 }
 
 --Initialize config variables if they are not saved
