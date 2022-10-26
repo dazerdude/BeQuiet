@@ -44,7 +44,7 @@ function f:OnEvent(event, addon)
 		--Block the talking head unless its in the whitelist
 		if (has_value(WHITELIST, subZoneName) ~= true and has_value(WHITELIST, zoneName) ~= true) then
 			--Close the talking head
-			TalkingHeadFrame_CloseImmediately()
+			C_TalkingHead.IgnoreCurrentTalkingHead();
 			if VERBOSE == 1 then
 				print("BeQuiet blocked a talking head! /bq verbose to turn this alert off.")
 			end
