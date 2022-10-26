@@ -1,4 +1,4 @@
-version = "v3.0.7"
+version = "v10.0.0"
 WL_DEFAULT = {
 	"Temple of Fal'adora",
 	"Falanaar Tunnels",
@@ -36,26 +36,21 @@ local f = CreateFrame("Frame")
 
 --Main function
 function f:OnEvent(event, addon)
-	--Check if the talkinghead addon is being loaded
-	if addon == "Blizzard_TalkingHeadUI" then
-		hooksecurefunc("TalkingHeadFrame_PlayCurrent", function()
-			--Query current zone and subzone when talking head is triggered
-			subZoneName = GetSubZoneText();
-			zoneName = GetZoneText();
-			--Only run this logic if the functionality is turned on
-			if ENABLED == 1 then
-				--Block the talking head unless its in the whitelist
-				if (has_value(WHITELIST, subZoneName) ~= true and has_value(WHITELIST, zoneName) ~= true) then
-					--Close the talking head
-					TalkingHeadFrame_CloseImmediately()
-					if VERBOSE == 1 then
-						print("BeQuiet blocked a talking head! /bq verbose to turn this alert off.")
-					end
-				end
+	--Query current zone and subzone when talking head is triggered
+	subZoneName = GetSubZoneText();
+	zoneName = GetZoneText();
+	--Only run this logic if the functionality is turned on
+	if ENABLED == 1 then
+		--Block the talking head unless its in the whitelist
+		if (has_value(WHITELIST, subZoneName) ~= true and has_value(WHITELIST, zoneName) ~= true) then
+			--Close the talking head
+			TalkingHeadFrame_CloseImmediately()
+			if VERBOSE == 1 then
+				print("BeQuiet blocked a talking head! /bq verbose to turn this alert off.")
 			end
-		end)
-	self:UnregisterEvent(event)
+		end
 	end
+	self:UnregisterEvent(event)
 end
 
 function removeFirst(tbl, val)
@@ -159,5 +154,5 @@ end
 SLASH_BQ1 = '/bq'
 SlashCmdList["BQ"] = MyAddonCommands
 
-f:RegisterEvent("ADDON_LOADED")
+f:RegisterEvent("TALKINGHEAD_REQUESTED")
 f:SetScript("OnEvent", f.OnEvent)
