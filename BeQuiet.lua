@@ -1,4 +1,4 @@
-version = "v10.0.0"
+version = "v10.0.1"
 WL_DEFAULT = {
 	"Temple of Fal'adora",
 	"Falanaar Tunnels",
@@ -34,8 +34,8 @@ end
 --Create the frame
 local f = CreateFrame("Frame")
 
---Main function
-function f:OnEvent(event, addon)
+
+function close_head()
 	--Query current zone and subzone when talking head is triggered
 	subZoneName = GetSubZoneText();
 	zoneName = GetZoneText();
@@ -44,13 +44,19 @@ function f:OnEvent(event, addon)
 		--Block the talking head unless its in the whitelist
 		if (has_value(WHITELIST, subZoneName) ~= true and has_value(WHITELIST, zoneName) ~= true) then
 			--Close the talking head
-			C_TalkingHead.IgnoreCurrentTalkingHead();
+			TalkingHeadFrame:CloseImmediately();
 			if VERBOSE == 1 then
 				print("BeQuiet blocked a talking head! /bq verbose to turn this alert off.")
 			end
 		end
 	end
-	self:UnregisterEvent(event)
+end
+
+--Main function
+function f:OnEvent(event, ...)
+	if event == "PLAYER_LOGIN" then
+		hooksecurefunc(TalkingHeadFrame, "PlayCurrent", close_head);
+	end
 end
 
 function removeFirst(tbl, val)
@@ -154,5 +160,5 @@ end
 SLASH_BQ1 = '/bq'
 SlashCmdList["BQ"] = MyAddonCommands
 
-f:RegisterEvent("TALKINGHEAD_REQUESTED")
+f:RegisterEvent("PLAYER_LOGIN")
 f:SetScript("OnEvent", f.OnEvent)
