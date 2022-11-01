@@ -34,7 +34,6 @@ end
 --Create the frame
 local f = CreateFrame("Frame")
 
-
 function close_head()
 	--Query current zone and subzone when talking head is triggered
 	subZoneName = GetSubZoneText();
