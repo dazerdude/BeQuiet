@@ -16,4 +16,5 @@ New functionality for version 3 coming for Shadowlands:
 3. '/bq show' will print the current list of whitelisted zones to your chatbox.
 
 4. '/bg verbose' will print a message in your chat box indicating that a talking head was blocked. I'm adding this with the Shadowlands release for some players who might not realize the talking heads are being blocked when new content releases. Run the command to toggle it on or off.
-https://www.curseforge.com/wow/addons/bequiet
+
+5. '/bq delete' will totally delete the whitelist.
