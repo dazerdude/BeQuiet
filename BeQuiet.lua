@@ -1,4 +1,5 @@
 version = "v10.0.2"
+
 WL_DEFAULT = {
 	"Temple of Fal'adora",
 	"Falanaar Tunnels",
