@@ -13,7 +13,7 @@ Functionality:
 
 2. '/bq whitelist (currentzone | currentsubzone)' This will allow talking heads in your current major zone or sub-zone. The zones are dictated by where you are in the game, but an example for a Major zone would be Orgrimmar and an example of the sub-zone would be the Valley of Strength. This should help users quickly whitelist areas based on their immediate needs and preferences and won't require me to maintain a full whitelist. Use the command once to add the zone to the whitelist and a second time to remove it.
 
-3. '/bq reset' will reset the whitelist back to the withered army training and island expedition zones only.
+3. '/bq reset' will reset the whitelist back to the withered army training, island expedition zones, and torghast only.
 
 4. '/bq show' will print the current list of whitelisted zones to your chatbox.
 
