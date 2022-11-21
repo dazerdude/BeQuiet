@@ -1,4 +1,4 @@
-version = "v10.0.2.1"
+version = "v10.0.3"
 
 WL_DEFAULT = {
 	"Temple of Fal'adora",
@@ -79,14 +79,27 @@ end
 
 --Slash command function
 function MyAddonCommands(args)
+	allow_msg = 'BeQuiet disabled - now allowing talking heads.'
+	block_msg = 'BeQuiet enabled - now blocking talking heads except for whitelisted zones.'
+
 	if args == 'off' then
 		ENABLED = 0
-		print('BeQuiet disabled - now allowing talking heads.')
+		print(allow_msg)
 	end
 
 	if args == 'on' then
 		ENABLED = 1
-		print('BeQuiet enabled - now blocking talking heads except for whitelisted zones.')
+		print(block_msg)
+	end
+
+	if args == 'toggle' then
+		if ENABLED == 0 then
+			ENABLED = 1
+			print(block_msg)
+		elseif ENABLED == 1 then
+			ENABLED = 0
+			print(allow_msg)
+		end
 	end
 
 	if args == 'whitelist currentzone' then
