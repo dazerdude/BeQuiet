@@ -1,4 +1,4 @@
-version = "v10.0.4"
+version = "v10.0.7"
 
 WL_DEFAULT = {
 	"Temple of Fal'adora",
@@ -44,7 +44,9 @@ function close_head()
 		--Block the talking head unless its in the whitelist
 		if (has_value(WHITELIST, subZoneName) ~= true and has_value(WHITELIST, zoneName) ~= true) then
 			--Close the talking head
-			TalkingHeadFrame:CloseImmediately();
+			--TalkingHeadFrame:CloseImmediately(); pre 10.0.7
+			TalkingHeadFrame:Hide()
+			RunNextFrame(function() StopSound(TalkingHeadFrame.voHandle) end);
 			if VERBOSE == 1 then
 				print("BeQuiet blocked a talking head! /bq verbose to turn this alert off.")
 			end
