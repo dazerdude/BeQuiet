@@ -1,4 +1,4 @@
-version = "v10.0.7"
+version = "v10.0.8"
 
 WL_DEFAULT = {
 	"Temple of Fal'adora",
@@ -46,7 +46,9 @@ function close_head()
 			--Close the talking head
 			--TalkingHeadFrame:CloseImmediately(); pre 10.0.7
 			TalkingHeadFrame:Hide()
-			RunNextFrame(function() StopSound(TalkingHeadFrame.voHandle) end);
+			if TalkingHeadFrame.voHandle ~= nil then
+				RunNextFrame(function() StopSound(TalkingHeadFrame.voHandle) end);
+			end
 			if VERBOSE == 1 then
 				print("BeQuiet blocked a talking head! /bq verbose to turn this alert off.")
 			end
