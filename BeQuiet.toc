@@ -1,5 +1,5 @@
-## Interface: 100007
-## Version: 10.0.7.4
+## Interface: 100100
+## Version: 10.1.0.1
 ## Title: BeQuiet
 ## Author: Xorag
 ## Notes: Suppresses talking chat head frame and audio
